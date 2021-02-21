@@ -1,7 +1,5 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 namespace TldCoords
 {
@@ -9,7 +7,6 @@ namespace TldCoords
     {
         private Koordinaten? _lastCoords;// = new Koordinaten() {XReal = 1234, YReal = 1234};
         private Koordinaten? _currentCoords;// = new Koordinaten() {XReal = 1000, YReal = 1000} ;
-        private string T;
         
         public void SetCoordinates(Koordinaten coords)
         {
@@ -17,7 +14,6 @@ namespace TldCoords
                 return;
             _lastCoords = _currentCoords;
             _currentCoords = coords;
-            T = Guid.NewGuid().ToString();
         }
 
         private readonly Pen _pen = new Pen(Color.Red, 5);
@@ -35,7 +31,6 @@ namespace TldCoords
             var n = CompassCalculator.Calculate(_lastCoords, _currentCoords);
             g.DrawLine(_pen, n.From, n.To);
             g.DrawEllipse(_pen, 47, 47, 6, 6);
-            Text = T;
           
             base.OnPaint(e);
         }
