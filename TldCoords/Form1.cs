@@ -16,7 +16,7 @@ namespace TldCoords
         private readonly ConcurrentBag<string> _filesToMove = new ConcurrentBag<string>();
         private readonly BackgroundWorker _worker = new BackgroundWorker();
 
-        private delegate void SafeCallDelegate(Label label, float coords);
+        private delegate void SafeCallDelegate(Label label, double coords);
 
         private readonly Canvas _canvas = new Canvas();
         
@@ -90,16 +90,16 @@ namespace TldCoords
 
             // calculate  distances
             var maxdist = Math.Max(distx, disty);
-            var div = maxdist / 60m; //Noppen
+            double div = maxdist / 60d; //Noppen
 
             k = new Koordinaten()
             {
                 XReal = k.XReal,
                 YReal = k.YReal,
                 ZReal = k.ZReal,
-                X = Convert.ToInt32(Math.Round(k.XReal / div, 0)),
-                Y = Convert.ToInt32(Math.Round(k.YReal / div, 0)),
-                Z = Convert.ToInt32(Math.Round(k.ZReal * 3 / div, 0))
+                X = Math.Round(k.XReal / div, 1),
+                Y = Math.Round(k.YReal / div, 1),
+                Z = Math.Round(k.ZReal * 3 / div, 1)
             };
 
             _canvas.SetCoordinates(k);
@@ -118,7 +118,7 @@ namespace TldCoords
             fw.Close();
         }
 
-        private void SetLabelText(Label label, float coords)
+        private void SetLabelText(Label label, double coords)
         {
             if (label.InvokeRequired)
             {
@@ -127,7 +127,7 @@ namespace TldCoords
             }
             else
             {
-                var newText = Math.Round(coords, 1).ToString(CultureInfo.GetCultureInfo("de-DE"));
+                var newText = coords.ToString("N1", CultureInfo.GetCultureInfo("de-DE"));
                 label.ForeColor = label.Text == newText ? Color.Black : Color.Red;
                 label.Text = newText;
                 _canvas.Refresh();

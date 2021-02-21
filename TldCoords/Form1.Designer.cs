@@ -42,12 +42,12 @@
             // 
             // LblX
             // 
-            this.LblX.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.LblX.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LblX.Location = new System.Drawing.Point(0, 20);
             this.LblX.Name = "LblX";
             this.LblX.Size = new System.Drawing.Size(110, 40);
             this.LblX.TabIndex = 0;
-            this.LblX.Text = "000";
+            this.LblX.Text = "00,0";
             this.LblX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
@@ -90,12 +90,12 @@
             // 
             // LblY
             // 
-            this.LblY.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.LblY.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LblY.Location = new System.Drawing.Point(116, 20);
             this.LblY.Name = "LblY";
             this.LblY.Size = new System.Drawing.Size(110, 40);
             this.LblY.TabIndex = 3;
-            this.LblY.Text = "000";
+            this.LblY.Text = "00,0";
             this.LblY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LblZReal
@@ -119,12 +119,12 @@
             // 
             // LblZ
             // 
-            this.LblZ.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.LblZ.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LblZ.Location = new System.Drawing.Point(232, 20);
             this.LblZ.Name = "LblZ";
             this.LblZ.Size = new System.Drawing.Size(110, 40);
             this.LblZ.TabIndex = 6;
-            this.LblZ.Text = "000";
+            this.LblZ.Text = "00,0";
             this.LblZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1

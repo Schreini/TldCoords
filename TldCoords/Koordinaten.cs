@@ -2,9 +2,9 @@
 {
     public record Koordinaten
     {
-        public int X { get; init; }
-        public int Y { get; init; }
-        public int Z { get; init; }        
+        public double X { get; init; }
+        public double Y { get; init; }
+        public double Z { get; init; }        
         public int XReal { get; init; }
         public int YReal { get; init; }
         public int ZReal { get; init; }
