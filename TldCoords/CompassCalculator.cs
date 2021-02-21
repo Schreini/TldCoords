@@ -7,7 +7,7 @@ namespace TldCoords
     {
         private const int CompassSize = 50;
 
-        public static Needle Calculate(Koordinaten last, Koordinaten current)
+        public Needle Calculate(Koordinaten last, Koordinaten current)
         {
  
 

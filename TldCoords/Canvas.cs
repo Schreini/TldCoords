@@ -28,7 +28,7 @@ namespace TldCoords
 
             var g = e.Graphics;
 
-            var n = CompassCalculator.Calculate(_lastCoords, _currentCoords);
+            var n = new CompassCalculator().Calculate(_lastCoords, _currentCoords);
             g.DrawLine(_pen, n.From, n.To);
             g.DrawEllipse(_pen, 47, 47, 6, 6);
           
