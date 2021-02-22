@@ -43,13 +43,16 @@ namespace TldCoords
 
         private void WorkerOnDoWork(object? sender, DoWorkEventArgs e)
         {
+            var now = $"{DateTime.Now:u}".Replace(':', '_');
+            var path = @$"E:\TheLongDark\MappingAshCanyon\All\{now}";;
+            Directory.CreateDirectory(path);
             while (true)
             {
                 while (_filesToMove.TryTake(out string? file))
                 {
                     try
                     {
-                        File.Move(file, @$"E:\TheLongDark\MappingAshCanyon\All\{Path.GetFileName(file)}", true);
+                        File.Move(file, @$"{path}\{Path.GetFileName(file)}", true);
                     }
                     catch
                     {
